@@ -2,8 +2,8 @@
 
 ## A Hello World program
 Here's our first C++ program. You will want to write this in a new file called
-`main.cpp`. This file is always the root of your C++ program and will contain 
-a `main()` method which is where execution of your program begins.
+`main.cpp`. This file is always the start of your C++ program and will contain 
+a `main()` function which is where execution of your program begins.
 
 We'll give the whole program below and then explain some of its parts later.
 
@@ -35,12 +35,15 @@ int main()       // This is a function taking no arguments and returning an inte
     // You won't encounter these too often so don't worry about it for now.
     std::cout << "Hello world, the value is: " << result << std::endl;
 
+    // Return a value from the function.
+    // For historical reasons, returning 0 from your main() function means
+    // the program was successful.
     return 0;
 }
 
 ```
 
-`main.cpp` is a C++ source file. Unlike in an interpreted language like Python, 
+`main.cpp` is a C++ source file. Unlike in an "interpreted" language like Python, 
 this file is not used directly when running the program. Instead, it must be
 given to a compiler in order to produce an executable binary to be run by your
 computer.
