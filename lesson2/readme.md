@@ -58,7 +58,7 @@ TODO something something its bad
 
 When defining a variable, you can also make it constant:
 ```C++
-const int numberOfDogs = countDogs();
+const int numberOfDogs = 6;
 ```
 This means that `numberOfDogs` can't be written to after it has been defined.
 Making variables constant can make it easier for you to reason about your
@@ -74,3 +74,39 @@ that the compiler can evaluate. For example:
 constexpr double PI = 3.14159;
 constexpr double TAU = 2.0 * PI;
 ```
+
+## Operators
+Let's cover some of the basic operators in C++ so that you have something to 
+do with all your variables.
+
+The obvious arithmetic operators are present:
+
+`+`, `-`, `*` (multiply), and `/` (divide).
+
+The same operators are used for integers and floating point numbers, but will
+obviously give you different results.
+```C++
+const float dividedFloat = 7.0f / 2.0f;
+const int dividedInteger = 7 / 2;
+
+std::cout << "Float division: " << dividedFloat << std::endl;
+std::cout << "Int division: " << dividedInteger << std::endl;
+
+```
+Note the `f` on the end of the numbers above; it just means that they are 
+interpreted as `float`s rather than `double`s.
+
+Also of note are the increment and decrement operators:
+```C++
+int x = 1;
+
+++x;
+
+int y = 2;
+
+--y;
+
+```
+They will increase and decrease a variable by one, respectively. They can be 
+written as prefix or postfix (`++x` or `x++`) and there is a subtle 
+difference, but we don't need to worry about it.
