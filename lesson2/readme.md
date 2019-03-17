@@ -81,7 +81,7 @@ do with all your variables.
 
 The obvious arithmetic operators are present:
 
-`+`, `-`, `*` (multiply), and `/` (divide).
+`+`, `-`, `*` (multiply), `/` (divide), and `%` (modulo).
 
 The same operators are used for integers and floating point numbers, but will
 obviously give you different results.
@@ -110,3 +110,27 @@ int y = 2;
 They will increase and decrease a variable by one, respectively. They can be 
 written as prefix or postfix (`++x` or `x++`) and there is a subtle 
 difference, but we don't need to worry about it.
+
+There are also logical operators:
+
+`&&` (logical AND)
+
+`||` (logical OR)
+
+`!` (logical NOT)
+
+These can operate on `bool` values (or things that can be treated as `bool`s).
+
+And comparison operators:
+
+`==` (equals)
+
+`!=` (not equals)
+
+`>` and `<` (strictly greater and strictly lesser)
+
+`>=` and `<=` (greater or equal and lesser or equal).
+
+Don't get `=` (assignment) confused with `==` (equality)!
+
+Try experimenting with each of these yourself.
