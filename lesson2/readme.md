@@ -1,4 +1,4 @@
-# Types and variables
+# Types, variables and operators
 
 ## Types in C++
 C++ is a strongly-typed, statically-typed language. 
@@ -43,3 +43,34 @@ a `char`. As a result there can be differences in their sizes between
 platforms, which can cause problems for some types of programs. To address 
 this, some programs and libraries define their own primitive types so they
 can control the size on each platform._ 
+
+## Variables
+As you saw in your hello world program, you can define a local variable
+as follows:
+```C++
+int x = 5;
+```
+You can also _declare_ a variable without defining its value, as in:
+```C++
+int x;
+```
+TODO something something its bad
+
+When defining a variable, you can also make it constant:
+```C++
+const int numberOfDogs = countDogs();
+```
+This means that `numberOfDogs` can't be written to after it has been defined.
+Making variables constant can make it easier for you to reason about your
+program, as there are fewer "moving parts". It helps to avoid certain types of
+bugs where a value has been changed when you weren't expecting it to, and 
+can sometimes help the compiler to optimize your program.
+
+An even stronger restriction is to define a _constant expression_. This is a
+relatively new feature that means the value of your constant can be evaluated
+at compile-time. A constant expression can just be a number or an expression
+that the compiler can evaluate. For example:
+```C++
+constexpr double PI = 3.14159;
+constexpr double TAU = 2.0 * PI;
+```
