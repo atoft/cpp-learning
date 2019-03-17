@@ -57,6 +57,9 @@ int add(int x1, int x2)
 {
     return x1 + x2;
 }
+
+// Some other code
+const int sum = add(1, 2);
 ```
 Functions can take as many arguments as you want, but can only have one return
 value. There are several ways to get around that restriction, but we'll 
@@ -65,6 +68,24 @@ learn more later!
 Can you write a function to return the length of a 3D vector? Hint, you may want 
 to call the `std::sqrt()` function as part of your function, which means you'll
 need to `#include<cmath>` at the start of the program.
+
+## Aside: reading user input
+Here's a quick way for your program to read in values from the terminal input,
+so that you can try out your program with multiple different values.
+```C++
+std::cout << "Enter a number:" << std::endl;
+
+float userInput = 0.0f;
+
+std::cin >> userInput;
+
+```
+
+Now `userInput` will contain a `float` typed in by the user. Please note that 
+this is bad practice, because if the user doesn't type something that could be 
+interpreted as a `float`, the program will continue running with a 
+potentially invalid value in `userInput`. A real program should do some 
+error handling to deal with the case of incorrect input.
 
 ## Control flow
 TODO
