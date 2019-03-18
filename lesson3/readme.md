@@ -234,4 +234,4 @@ using `break;` and `continue;` in your own loops.
 You're now ready to implement some functions to run simple algorithms. Try 
 writing a function to compute the greatest common divisor of two variables, 
 using the control flow techniques you've learnt. Or implement something more 
-mathematically interesting if you want. ¯\\_(ツ)_/¯
+mathematically interesting if you want. ¯\\\_(ツ)\_/¯
