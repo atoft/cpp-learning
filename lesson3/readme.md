@@ -88,4 +88,150 @@ potentially invalid value in `userInput`. A real program should do some
 error handling to deal with the case of incorrect input.
 
 ## Control flow
-TODO
+What is control flow? It's things that control the flow of execution through
+your program, such as by looping or branching. Here's some examples.
+
+### If
+This is a simple if statement. The body enclosed in `{}` is executed if the 
+condition is true. As with functions, variables defined inside the curly 
+braces will only exist within this scope.
+```C++
+const int input = 5
+const bool isEven = (input % 2 == 0);
+
+if (isEven)
+{
+    std::cout << input << " is even" << std::endl;
+}
+```
+You can also execute something else if the condition is false:
+```C++
+if (isEven)
+{
+    std::cout << input << " is even" << std::endl;
+}
+else
+{
+    std::cout << input << " is odd" << std::endl;
+}
+```
+or check multiple conditions in sequence:
+```C++
+if (isEven)
+{
+    std::cout << input << " is even" << std::endl;
+}
+else if(input == 3)
+{
+    std::cout << input << " is three" << std::endl;
+}
+else
+{
+    std::cout << input << " is odd and not three" << std::endl;
+}
+```
+
+### Switch
+A switch statement is another way of branching, based on the value of a
+particular variable. It's often used with _enums_, which you'll encounter
+later, but for now I'll just give an example.
+```C++
+const int day = 1;
+
+// Print the name of the day.
+switch(day)
+{
+case 0:
+    std::cout << "Monday" << std::endl;
+    break;
+case 1:
+    std::cout << "Tuesday" << std::endl;
+    break;
+case 2:
+    std::cout << "Wednesday" << std::endl;
+    break;
+    
+// Rest of the days of the week...
+
+// Handles values that we didn't explicity consider
+default:
+    std::cout << "Invalid day" << std::endl;
+    break;
+}
+```
+The syntax of switch statements is widely regarded as poorly designed
+in C++; if you miss out a `break;` your code will continue executing the next
+branch of the switch, which is probably not what you intended. But switch
+statements are still useful where otherwise you'd be stuck with a very long
+sequence of `if`s.
+
+### While
+A while loop is the simplest way to repeatedly execute something. The code 
+inside the loop will be run again and again until the condition becomes false.
+```C++
+const int secretNumber = 42;
+
+bool secretGuessed = false;
+
+while (!secretGuessed)
+{
+    int guess = 0;
+    
+    std::cin >> guess;
+    
+    secretGuessed = (guess == secretNumber);
+}
+std::cout << "You guessed the number!" << std::endl;
+```
+
+### For
+Often a for loop is preferable to a while loop. A for loop gives you a 
+structured way to define a variable, change its value, and give a condition
+to terminate the loop.
+
+```C++
+// Count up
+for (int index = 0; index < 5; ++index)
+{
+    std::cout << "Iteration " << index << std::endl;
+}
+
+// Count down
+for (int count = 5; count > 0; --count)
+{
+    std::cout << count << std::endl;
+}
+std::cout << "Liftoff!" << std::endl;
+```
+
+In modern C++, it's generally preferred to instead use a _ranged-for loop_ 
+whenever possible. A ranged-for lets you directly loop over the elements in 
+an array or other collection, rather than manually handling an index. This
+makes it less error prone and clearer to read.
+
+We won't cover arrays yet, but here's a preview:
+```C++
+std::vector<int> mArray{5, 2, 19, 11};
+
+for (int x : myArray)
+{
+    // Is run once for each element in myArray, with x set to the value 
+    // of the current element.
+    doSomethingWith(x);
+}
+```
+
+### Loop operations
+There are a couple of operations you need to know about for working with 
+loops. Calling `break;` anywhere within a loop will end the loop, and your
+program will move on to executing the code immediately after the loop body.
+Calling `continue;` inside a loop will end the current iteration of the loop 
+and continue on to the next iteration. Note if you are using a loop nested 
+inside another loop, these operations will act on the innermost loop. Try 
+using `break;` and `continue;` in your own loops.
+
+### Writing an algorithm
+You're now ready to implement some functions to run simple algorithms. Try 
+writing a function to compute the greatest common divisor of two variables, 
+using the control flow techniques you've learnt. Or implement something more 
+mathematically interesting if you want. ¯\\_(ツ)_/¯
