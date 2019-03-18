@@ -35,7 +35,8 @@ for double precision floating-point numbers. Integers can also be preceded by
 
 You'll also encounter `char`, which is often used to represent an alphanumeric
 character but is actually a smaller capacity integer type. There are other
-some other primitive types, a full list is TODO
+primitive types, a full list is 
+[here](https://en.cppreference.com/w/cpp/language/types).
 
 _Aside: Slightly confusingly, the C++ standard doesn't actually define the 
 size (in terms of bits or bytes) of each type, only their size relative to 
@@ -52,9 +53,12 @@ int x = 5;
 ```
 You can also _declare_ a variable without defining its value, as in:
 ```C++
-int x;
+int x;      // Bad.
 ```
-TODO something something its bad
+This is bad practice, because the value of `x` may not have been initialized to
+anything meaningful; it could just be the value of whatever data was in 
+memory before. Using `x` without writing to it could cause _undefined behaviour_
+in your program. Basically, don't do it.
 
 When defining a variable, you can also make it constant:
 ```C++

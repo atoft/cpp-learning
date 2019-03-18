@@ -1,4 +1,4 @@
-# Functions and stuff
+# Functions and control flow
 One of the most basic ways to organize and reuse your code is by writing 
 functions. In this lesson we'll just use "free functions" (as opposed to methods)
 but you'll use these less commonly in practice.
