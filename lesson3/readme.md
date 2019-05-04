@@ -211,7 +211,7 @@ makes it less error prone and clearer to read.
 
 We won't cover arrays yet, but here's a preview:
 ```C++
-std::vector<int> mArray{5, 2, 19, 11};
+std::vector<int> myArray{5, 2, 19, 11};
 
 for (int x : myArray)
 {
