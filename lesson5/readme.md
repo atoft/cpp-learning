@@ -177,9 +177,9 @@ Worms can only move at a particular speed; they can only squirm so fast.
 Because ```m_Position``` is a private member variable, other parts of your 
 code can't modify it directly; some other piece of code can't fling your 
 worm miles away. The worm's position can _only_ be moved by calling 
-```MoveLeft``` so we can reason much more easily about how it can change.
-This also means we could change the way that position is represented 
-internally without affecting other areas of our code.
+```MoveLeft``` or ```MoveRight``` so we can reason much more easily about how 
+it can change. This also means we could change the way that position is 
+represented internally without affecting other areas of our code.
 
 (We can also imagine the move methods including other side effects, such
 as playing the worm's movement animation on the screen and making a 
