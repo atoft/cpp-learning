@@ -121,7 +121,7 @@ if (isEven)
 {
     std::cout << input << " is even" << std::endl;
 }
-else if(input == 3)
+else if (input == 3)
 {
     std::cout << input << " is three" << std::endl;
 }
