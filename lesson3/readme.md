@@ -24,7 +24,7 @@ function body.
 The curly braces `{}` enclose the function body (i.e. the code that makes up 
 the functionality of the function). Local variables defined inside here will be
 within the _scope_ of the function - the compiler won't let you access them
-outside of this scope of this function, and when your program is running, they
+outside of this function, and when your program is running, they
 will all be removed from memory when the function returns. (With the exception
 of the return value, which will be copied so that it can be used wherever the
 function is _called_ from.)
