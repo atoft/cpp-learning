@@ -9,8 +9,9 @@ interact with. By hiding part of your program's functionality within an
 abstraction, you reduce the mental load of working within your code, and make it
 easier to maintain by preventing interdependencies between different concepts.
 
-If that all sounds a bit wooly, then try reading this Wikipedia article [TODO 
-LINK], which I'm pretty sure is even less concrete :P. But if the idea doesn't
+If that all sounds a bit wooly, then try reading 
+[this Wikipedia article](https://en.wikipedia.org/wiki/Abstraction_(computer_science)), 
+which I'm pretty sure is even less concrete :P. But if the idea doesn't
 sound convincing to you, hopefully it will when you start to work within
 larger codebases.
 
@@ -97,7 +98,7 @@ public:
 private:
     float m_Position = 0.f;
     
-    static constexpr WORM_SPEED = 2.5f;
+    static constexpr float WORM_SPEED = 2.5f;
 }
 
 ```
