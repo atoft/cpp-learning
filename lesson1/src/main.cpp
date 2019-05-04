@@ -4,24 +4,30 @@
    multi-line
       comment */
 
-#include <iostream>  // This is a preprocessor include directive.
+// This is a preprocessor include directive.
 // (We'll explain more later!)
+#include <iostream>
 
-int main()       // This is a function taking no arguments and returning an integer.
-{                // The syntax should be familiar from Java or C#.
-
-    int myVariable = 5;         // Declaring local variables.
+// This is a function taking no arguments and returning an integer.
+int main()
+{
+    // Defining local variables.
+    int myVariable = 5;
     int myOtherVariable = 6;
 
-    int result = (myVariable + myOtherVariable) * 2; // Example of an arithemtic expression.
+    // Example of an arithemtic expression.
+    int result = (myVariable + myOtherVariable) * 2;
 
-    result = result + 2;                             // Variables are mutable by default :(
+    // By default, variables can be changed again after they are defined.
+    result = result + 2;
 
-
-    // Writing to the standard output (e.g. your terminal).
+    // Writing to cout, the standard output (e.g. your terminal).
     // cout is an example of a "stream" and << is an operator used to write to a stream.
     // You won't encounter these too often so don't worry about it for now.
     std::cout << "Hello world, the value is: " << result << std::endl;
 
+    // Return a value from the function.
+    // For historical reasons, returning 0 from your main() function means
+    // the program was successful.
     return 0;
 }

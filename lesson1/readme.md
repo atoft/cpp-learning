@@ -5,7 +5,7 @@ Here's our first C++ program. You will want to write this in a new file called
 `main.cpp`. This file is always the start of your C++ program and will contain 
 a `main()` function which is where execution of your program begins.
 
-We'll give the whole program below and then explain more of its parts in future 
+We'll give the whole program below and begin to explain its parts in future 
 lessons.
 
 _The source code for each lesson is in the subfolder `src`._
@@ -17,19 +17,22 @@ _The source code for each lesson is in the subfolder `src`._
    multi-line
       comment */
 
-#include <iostream>  // This is a preprocessor include directive.
-                     // (We'll explain more later!)
+// This is a preprocessor include directive.
+// (We'll explain more later!)
+#include <iostream>  
 
-int main()       // This is a function taking no arguments and returning an integer.
-{                // The syntax should be familiar from Java or C#.
-
-    int myVariable = 5;         // Defining local variables.
+// This is a function taking no arguments and returning an integer.
+int main()
+{
+    // Defining local variables.
+    int myVariable = 5;
     int myOtherVariable = 6;
 
-    int result = (myVariable + myOtherVariable) * 2;                            // Example of an arithemtic expression.
+    // Example of an arithemtic expression.
+    int result = (myVariable + myOtherVariable) * 2;
 
-    result = result + 2;                        // By default, variables can be changed again after they are defined. 
-
+    // By default, variables can be changed again after they are defined. 
+    result = result + 2;
 
     // Writing to cout, the standard output (e.g. your terminal).
     // cout is an example of a "stream" and << is an operator used to write to a stream.
@@ -41,7 +44,6 @@ int main()       // This is a function taking no arguments and returning an inte
     // the program was successful.
     return 0;
 }
-
 ```
 
 `main.cpp` is a C++ source file. Unlike in an "interpreted" language like Python, 
