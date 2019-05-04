@@ -93,7 +93,7 @@ in memory. Now, what happens when we want to call a function that needs to
 access the database? We just need to give that function the address of the 
 data and it can go and access it! The only thing that needs to be copied into
 the function's stack frame is the address of the data, rather than all the 
-data itself. In addition, the function can update the database in memory too,
+data itself. In addition, the function can update the database on the heap too,
 without making a copy of it.
 
 At some later point, all the work the program needed to do with the database
